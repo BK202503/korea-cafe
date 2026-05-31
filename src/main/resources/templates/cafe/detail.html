@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${cafe.name + ' — 대한민국 카페 소개'}">카페</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="site-header">
+    <a th:href="@{/cafes}" class="back-link">← 목록으로</a>
+    <h1 th:text="${cafe.name}">카페 이름</h1>
+</header>
+
+<main class="cafe-detail">
+    <img th:if="${cafe.imageUrl}" th:src="${cafe.imageUrl}" alt="" class="hero">
+    <dl>
+        <dt>지역</dt>
+        <dd th:text="${cafe.region.displayName}">지역</dd>
+        <dt>주소</dt>
+        <dd th:text="${cafe.address}">주소</dd>
+        <th:block th:if="${cafe.signatureMenu}">
+            <dt>시그니처 메뉴</dt>
+            <dd th:text="${cafe.signatureMenu}">메뉴</dd>
+        </th:block>
+    </dl>
+    <section class="description">
+        <h2>소개</h2>
+        <p th:text="${cafe.description}">설명</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Cafe Harness</p>
+</footer>
+</body>
+</html>

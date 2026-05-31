@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>대한민국 카페 소개 — 카페 목록</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="site-header">
+    <h1>대한민국 카페 소개</h1>
+    <p>지역별로 둘러보는 우리 동네 스페셜티 카페</p>
+</header>
+
+<nav class="region-filter">
+    <a th:href="@{/cafes}" th:classappend="${selectedRegion == null} ? 'active'">전체</a>
+    <a th:each="r : ${regions}"
+       th:href="@{/cafes(region=${r.name()})}"
+       th:text="${r.displayName}"
+       th:classappend="${selectedRegion == r} ? 'active'"></a>
+</nav>
+
+<main class="cafe-grid">
+    <article th:each="cafe : ${cafes}" class="cafe-card">
+        <a th:href="@{/cafes/{id}(id=${cafe.id})}">
+            <img th:if="${cafe.imageUrl}" th:src="${cafe.imageUrl}" alt="" loading="lazy">
+            <div class="cafe-card-body">
+                <h2 th:text="${cafe.name}">카페 이름</h2>
+                <p class="region" th:text="${cafe.region.displayName}">지역</p>
+                <p class="address" th:text="${cafe.address}">주소</p>
+            </div>
+        </a>
+    </article>
+</main>
+
+<p th:if="${#lists.isEmpty(cafes)}" class="empty">해당 지역에 등록된 카페가 없습니다.</p>
+
+<footer>
+    <p>&copy; 2026 Cafe Harness</p>
+</footer>
+</body>
+</html>

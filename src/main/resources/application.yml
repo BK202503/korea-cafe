@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: cafe
+  profiles:
+    default: local
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/cafe?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Seoul
+    username: cafe
+    password: cafe
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    open-in-view: false
+    show-sql: true
+
+  thymeleaf:
+    cache: false
+
+server:
+  port: 9010
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
