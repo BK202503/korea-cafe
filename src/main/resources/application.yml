@@ -31,3 +31,9 @@ management:
     web:
       exposure:
         include: health,info
+
+naver:
+  local-search:
+    base-url: https://openapi.naver.com
+    client-id: ${NAVER_CLIENT_ID:}
+    client-secret: ${NAVER_CLIENT_SECRET:}

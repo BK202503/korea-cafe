@@ -1,0 +1,63 @@
+{
+  "lastBuildDate": "Sat, 31 May 2026 12:00:00 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "스텁 <b>카페</b> 강남",
+      "link": "https://stub.naver.example/cafe/1",
+      "category": "음식점>카페,디저트>커피전문점",
+      "description": "강남역 인근 스페셜티 카페",
+      "telephone": "02-1234-5678",
+      "address": "서울특별시 강남구 테헤란로 123",
+      "roadAddress": "서울특별시 강남구 테헤란로 123",
+      "mapx": 1271234567,
+      "mapy": 374567890
+    },
+    {
+      "title": "<b>모모스</b> 본점 스텁",
+      "link": "https://stub.naver.example/cafe/2",
+      "category": "음식점>카페,디저트>로스터리",
+      "description": "부산 대표 로스터리",
+      "telephone": "051-987-6543",
+      "address": "부산광역시 금정구 오시리아로 7",
+      "roadAddress": "부산광역시 금정구 오시리아로 7",
+      "mapx": 1290000000,
+      "mapy": 350000000
+    },
+    {
+      "title": "외계행성 카페",
+      "link": "https://stub.naver.example/cafe/3",
+      "category": "음식점>카페,디저트>커피전문점",
+      "description": "지구 밖 카페",
+      "telephone": "000-000-0000",
+      "address": "안드로메다 은하 알파성 12",
+      "roadAddress": "안드로메다 은하 알파성 12",
+      "mapx": 0,
+      "mapy": 0
+    },
+    {
+      "title": "스텁 한식당",
+      "link": "https://stub.naver.example/restaurant/4",
+      "category": "음식점>한식>국밥",
+      "description": "강남역 인근 한식당 — 카페 아님",
+      "telephone": "02-2222-3333",
+      "address": "서울특별시 강남구 역삼로 5",
+      "roadAddress": "서울특별시 강남구 역삼로 5",
+      "mapx": 1271111111,
+      "mapy": 374000000
+    },
+    {
+      "title": "<b>스타벅스</b> 해운대점",
+      "link": "https://stub.naver.example/cafe/5",
+      "category": "음식점>카페,디저트>커피전문점",
+      "description": "해운대 해변 인근",
+      "telephone": "1522-3232",
+      "address": "부산광역시 해운대구 구남로 1",
+      "roadAddress": "부산광역시 해운대구 구남로 1",
+      "mapx": 1291500000,
+      "mapy": 351000000
+    }
+  ]
+}

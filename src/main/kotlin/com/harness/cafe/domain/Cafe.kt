@@ -25,6 +25,19 @@ class Cafe(
     val imageUrl: String? = null,
     @Column(length = 100)
     val signatureMenu: String? = null,
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    val externalSource: CafeSource = CafeSource.SEED,
+    @Column(length = 500)
+    val externalId: String? = null,
+    @Column(length = 500)
+    val externalUrl: String? = null,
+    @Column
+    val mapX: Long? = null,
+    @Column
+    val mapY: Long? = null,
+    @Column(length = 50)
+    val phone: String? = null,
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
