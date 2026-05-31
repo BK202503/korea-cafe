@@ -11,3 +11,9 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
+
+naver:
+  local-search:
+    base-url: https://openapi.naver.com
+    client-id:
+    client-secret:
